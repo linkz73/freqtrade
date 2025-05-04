@@ -1,0 +1,10 @@
+import{r as i,o,c as n,a as s,b as t,e as l,w as d,d as r}from"./index-1f8801f6.js";const p={class:"md-content__inner md-typeset"},m={__name:"Updating",setup(c){return(h,e)=>{const a=i("router-link");return o(),n("article",p,[e[1]||(e[1]=s(`<h1 id="how-to-update"> 업데이트 방법 <a class="headerlink" href="#how-to-update" title="영구 링크"> ¶ </a></h1><p>Freqtrade 설치를 업데이트하려면, 아래 설치 방법에 따라 적절한 방법을 사용하세요.</p><div class="admonition note"><p class="admonition-title">변경 사항 추적</p><p>중대한 변경 사항이나 변경된 동작은 각 릴리스와 함께 게시되는 변경 로그에 문서화됩니다. 개발 브랜치를 사용하는 경우, 변경 사항에 놀라지 않도록 PR을 주기적으로 확인하세요.</p></div><h2 id="docker"> 도커(Docker) <a class="headerlink" href="#docker" title="영구 링크"> ¶ </a></h2><div class="admonition note"><p class="admonition-title"><code>master</code> 이미지를 사용하는 레거시 설치</p><p>릴리스 이미지를 위해 master에서 stable로 전환 중입니다. docker 파일을 수정하여 <code>freqtradeorg/freqtrade:master</code>를 <code>freqtradeorg/freqtrade:stable</code>로 교체하세요.</p></div><div class="highlight"><pre><code>docker compose pull
+docker compose up -d
+</code></pre></div><h2 id="installation-via-setup-script"> 설치 스크립트를 통한 설치 <a class="headerlink" href="#installation-via-setup-script" title="영구 링크"> ¶ </a></h2><div class="highlight"><pre><code>./setup.sh --update
+</code></pre></div><div class="admonition note"><p class="admonition-title">참고</p><p>이 명령을 실행할 때 가상 환경이 비활성화된 상태인지 확인하세요!</p></div><h2 id="plain-native-installation"> 일반 네이티브 설치 <a class="headerlink" href="#plain-native-installation" title="영구 링크"> ¶ </a></h2><p>종속성을 업데이트하지 않으면 문제가 발생할 수 있으니, 반드시 종속성도 업데이트하세요.</p><div class="highlight"><pre><code>git pull
+pip install -U -r requirements.txt
+pip install -e .
+
+# FreqUI가 최신 버전인지 확인
+freqtrade install-ui
+</code></pre></div><h3 id="problems-updating"> 업데이트 문제 <a class="headerlink" href="#problems-updating" title="영구 링크"> ¶ </a></h3><p>업데이트 문제는 주로 누락된 종속성(위의 지침을 따르지 않은 경우)이나 설치 실패(예: TA-Lib)로 인해 발생합니다. 관련 설치 섹션(아래의 일반적인 문제 링크)을 참조하세요.</p><p>일반적인 문제와 해결 방법:</p>`,15)),t("ul",null,[t("li",null,[l(a,{to:"windows-installation"},{default:d(()=>e[0]||(e[0]=[r("Windows에서 TA-Lib 업데이트")])),_:1})])])])}}};export{m as default};
